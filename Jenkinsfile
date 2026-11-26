@@ -18,14 +18,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Compiling the application with Maven...'
-                sh 'mvn clean compile'
+                bat 'mvn clean compile'
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running unit tests with Maven...'
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
     }
